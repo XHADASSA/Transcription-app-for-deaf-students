@@ -1,0 +1,103 @@
+.container {
+    max-width: 400px;
+    margin: 250px auto;
+    padding: 100px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+    font-family: 'Open Sans Hebrew', sans-serif;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.late {
+    width: 30%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: yellowgreen;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.late:hover {
+    border-radius: 40px;
+}
+
+.late-container {
+    display: flex;
+    justify-content: center;
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Sign-up-with-Google {
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-bottom: 20px;
+    width: auto;
+    font-family: Euclid Circular A;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 4px;
+    border: solid;
+    border-width: 1px;
+    display: flex;
+    gap: 8px;
+    transition: border-radius .15s;
+    color: #001E2B;
+    border-color: #00684A;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Sign-up-with-Google:hover {
+    border-radius: 40px;
+}
+
+.google-logo {
+    height: 35px; /* גובה התמונה */
+    width: auto; /* שמירה על פרופורציות התמונה */
+    margin-left: 50px; /* ריווח בין התמונה לכפתורים */
+    margin-right: 10px;
+}
+
+.header-Sign-up-with-Google {
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.input-group div {
+    flex: 1;
+}
+
+.Connection{
+    cursor: pointer;
+    text-decoration: underline;
+}

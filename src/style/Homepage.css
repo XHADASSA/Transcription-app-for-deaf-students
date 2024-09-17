@@ -1,0 +1,168 @@
+/* Homepage.css */
+
+body, html {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+    font-family: 'Open Sans Hebrew', sans-serif;
+}
+
+.background {
+    border: 15px solid white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg');
+    background-size: cover; /* מכסה את כל הדף */
+    background-repeat: no-repeat; /* לא חוזר על עצמו */
+    background-position: center; /* ממוקם במרכז */
+    filter: blur(5px); /* הוספת טשטוש */
+    z-index: -1; /* שם את הרקע מאחורי התוכן */
+}
+
+.page {
+    position: relative;
+    top: 250px;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    overflow-x: auto;
+}
+.h{
+    animation-duration: 2s;
+    animation-name: slidein;
+    text-shadow: 0 0 10px white;
+    font-size: 75px;
+    transition: filter 0.5s ease; /* הוספת אפקט מעבר חלק ל-beauty */
+    transition: transform 1.5s; /* מעבר במשך 5 שניות */
+}
+.h:hover {
+    filter: brightness(150%); /* הגדלת בהירות הטקסט כאשר העכבר מעליו */
+    transform: scale(1.05); /* גדילה לגודל של פי 1.3 */
+}
+
+span {
+    display: inline-block;
+    font-size: 3em;
+    animation: slidein 0.5s ease; /* אפקט של גלישה מלמעלה */
+    visibility: hidden;
+    color: black;
+}
+
+.welcome-buttons {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 150px;
+  }
+  
+.welcome-button {
+  width: 30%;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  visibility: hidden;
+  border-radius: 5px;
+  background-color: black; /* צבע רקע כפתור */
+  color: white; /* צבע טקסט כפתור */
+  transition: background-color 0.3s;
+}
+
+.welcome-button:hover {
+  border: 3px solid white;
+  background-color: rgb(27, 26, 26);
+}  
+
+.animate {
+    animation: move 1s infinite alternate; /* אפקט תנועה מצד לצד */
+}
+
+.general{
+    display: flex;
+    flex-direction: column;
+}
+
+.contents{
+    display: flex;
+    flex-direction: row;
+    flex:1;
+    top: 70px;
+    position: sticky;
+}
+
+.contents-header{
+    /* width: 100%; */
+    flex: 1;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-size: 200%;
+    border-radius: 50%;
+    text-shadow: 
+                1px 1px 0 #000, /* הצללה ימינה ולמטה */
+                -1px -1px 0 #000, /* הצללה שמאלה ולמעלה */
+                -1px 1px 0 #000, /* הצללה שמאלה ולמטה */
+                1px -1px 0 #000; /* הצללה ימינה ולמעלה */
+}
+
+.ref{
+    height: 200px;
+    /* border-top: 4px groove black; */
+    margin: 50px;
+}
+
+.content{
+    /* width: 100%; */
+    flex: 4;
+    border-bottom: 4px groove black;
+    font-size: 100%;
+    color: black;
+    line-height: 2;
+    direction: rtl;
+    text-align: center; /* אופציונלי, כדי להבטיח שהטקסט יהיה מיושר לימין */
+    unicode-bidi: embed;
+    display: grid;
+    place-items: center;
+}
+
+.Contact-Development{
+    width: auto;
+    display: flex;
+    cursor: pointer;
+    background-color:black ;
+    padding: 20px;
+}
+
+.Contact-Development:hover{
+    background-color: rgb(83, 130, 166);
+    border: 2px groove black;
+}
+
+@keyframes slidein {
+    from {
+        transform: translateY(-150vh) scale(2); /* התחל מלמעלה של המסך ותגדל פי 2 */
+    }
+    to {
+        transform: translateY(0) scale(1); /* סיים במרכז וקטן לגודל המקורי */
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(10px); /* שינוי המיקום מצד לצד */
+    }
+}

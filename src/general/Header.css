@@ -1,0 +1,17 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: white; /* ניתן לשנות לצבע אחר או לשקוף */
+  text-align: center; /* מרכז את התוכן */
+}
+
+.header-logo {
+  margin-bottom: 50px;
+  width: 100%; /* שינינו לגודל 100% */
+  height: auto; /* שומר על פרופורציות התמונה */
+  /*display: block; /* הופך את הלוגו לחסום */
+  margin: 0 auto; /* מבטל מרווחים נוספים */
+}

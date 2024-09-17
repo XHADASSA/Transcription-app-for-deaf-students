@@ -1,0 +1,28 @@
+/* Transcription.css */
+.container {
+    max-width: 800px;
+    margin: 500px auto; /* מרכז את המיכל אופקית */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+    position: relative; /* אפשר למרכז את המיכל בצורה מדויקת */
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.transcription-box {
+    border: 1px solid #000;
+    padding: 10px;
+    width: 500px;
+    height: 400px;
+    overflow-y: scroll;
+    white-space: pre-wrap;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,70 @@
+.header-logo{
+    height: 100px; /* גובה התמונה */
+    width: auto; /* שמירה על פרופורציות התמונה */
+    margin-left: 50px; /* ריווח בין התמונה לכפתורים */
+    margin-right: 10px;
+    cursor: pointer;
+}
+  
+.header {
+    display: flex;
+    flex-direction: row;
+    position: fixed; /* מבטיח שהכותרת תישאר במקום כאשר גוללים את הדף */
+    top: 0; /* התמקמות בחלק העליון של המסך */
+    right: 0; /* ממקם את הכותרת בצד ימין של המסך */
+    border-bottom: 1px solid white; /* גבול למראה ברור */
+    z-index: 100; /* לשים את ה-Header מעל שאר התוכן */
+    margin-top: 30px;
+    align-items: center; /* מיישר את הכפתורים והתמונה באמצע האנכי */
+}
+
+.button-header {
+    cursor: pointer; /* סמן עכבר כאשר מרחפים מעל הכפתור */
+    position: relative; /* נדרש כדי למקם את הקווים יחסית לכפתור */
+    flex: 1;
+    color: brown;
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0; /* צבע רקע עבור הכפתורים */
+    border-radius: 4px; /* פינות מעוגלות לכפתורים */
+    transition: background-color 0.3s ease;
+    overflow: hidden; /* למנוע הצגת הקווים מחוץ לכפתור */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.button-header::before,
+.button-header::after {
+    content: ''; /* תוכן ריק */
+    position: absolute; /* מיקום מוחלט יחסית לכפתור */
+    left: 0;
+    width: 100%; /* רוחב הקווים יתאים לרוחב הכפתור */
+    height: 2px; /* גובה הקווים */
+    background-color: brown; /* צבע הקווים */
+    transition: transform 0.3s ease; /* מעבר חלק להופעה */
+}
+
+/* קו עליון */
+.button-header::before {
+    top: 0; /* מיקום הקו בחלק העליון של הכפתור */
+    transform: translateY(-10px); /* התחלת הקו מחוץ לכפתור */
+}
+
+/* קו תחתון */
+.button-header::after {
+    bottom: 0; /* מיקום הקו בחלק התחתון של הכפתור */
+    transform: translateY(10px); /* התחלת הקו מחוץ לכפתור */
+}
+
+/* אפקט hover: הצגת הקווים בצורה חלקה */
+.button-header:hover::before {
+    transform: translateY(0); /* הצגת הקו העליון */
+}
+
+.button-header:hover::after {
+    transform: translateY(0); /* הצגת הקו התחתון */
+}
+
+.button-header:hover {
+    background-color: #e0e0e0; /* שינוי צבע ברוורס */
+}
